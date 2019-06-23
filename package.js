@@ -36,14 +36,15 @@ function getFilesFromFolder(packageName, folder) {
 
 Package.describe({
   name: 'kschingiz:api-folder-walker',
-  version: '1',
-  summary: '',
-  git: '',
+  version: '1.0.0',
+  summary: 'The package will help you to recursively retrieve files and assets in meteor packages',
+  git: 'https://github.com/kschingiz/api-folder-walker',
   documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.6.1');
+  api.versionsFrom('1.6.1.1');
+  api.use('ecmascript');
 
   api.constructor.prototype.getFilesFromFolder = getFilesFromFolder;
 });
