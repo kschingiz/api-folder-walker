@@ -5,8 +5,13 @@ The package will define `getFilesFromFolder` method in Package API instance whic
 ## Installation
 
 ```js
+mkdir packages
+cd packages
+git clone git@github.com:kschingiz/api-folder-walker.git
 meteor add kschingiz:api-folder-walker
 ```
+
+!!!Installing and publishing to atmoshpere repository will not work!!!
 
 ## Usage
 
