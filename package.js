@@ -25,8 +25,12 @@ function getFilesFromFolder(packageName, folder) {
     return filenames;
   }
   var cwd = process.cwd();
-  // chdir to our package directory
-  process.chdir('packages' + path.sep + packageName);
+
+  if (cwd.includes('packages')) {
+    process.chdir(packageName);
+  } else {
+    process.chdir('packages' + path.sep + packageName);
+  }
   // launch initial walk
   var result = walk(folder);
   // restore previous cwd
